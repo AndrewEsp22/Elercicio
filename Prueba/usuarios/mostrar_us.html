@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar Usuario</title>
+    <link rel="stylesheet" href="mostrar.css">
+</head>
+<body>
+    <h1>Datos del Usuario</h1>
+    <div id="datosUsuario"></div>
+    
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const tipoId = params.get('tipoId');
+        const nombre = params.get('nombre');
+        const apellidos  = params.get('apellidos'); 
+        const edad = params.get('edad');
+        const correo = params.get('correo');
+        
+        const datosUsuarioDiv = document.getElementById('datosUsuario');
+        datosUsuarioDiv.innerHTML = `
+            <p>ID: ${id}</p>
+            <p>Tipo de Identificación: ${tipoId}</p>
+            <p>Nombre: ${nombre}</p>
+            <p>Apellidos: ${apellidos}</p>
+            <p>Edad: ${edad}</p>
+            <p>Correo: ${correo}</p>`;
+    </script>
+ <a href="../index.html" class="action-link">Volver</a>
+
+</body>
+</html>

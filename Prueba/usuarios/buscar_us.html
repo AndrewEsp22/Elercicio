@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar usario</title>
+    <link rel="stylesheet" href="ag_us.css">
+</head>
+<body>
+    <from>
+        <h1>Buscar Usuario</h1>
+        <label>Ingrese el numero de identificación</labeL>
+        <select name="tipoIdentificacion" id="tipoIdentificacion">
+                <option value="tarjeta">T.I</option>
+                <option value="cedula">C.C</option>
+                <option value="otro">OTRO</option>
+        </select>
+        <input type="number" name="id" id="id" min="0"> 
+    </from>
+    <a href="#" id="nextLink" class="action-link" onclick="buscarUsuario()">Buscar</a> 
+    <script src="buscar_us.js"></script>
+</body>
+</html>

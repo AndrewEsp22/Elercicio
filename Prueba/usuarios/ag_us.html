@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Usuario</title>
+    <link rel="stylesheet" href="ag_us.css">
+</head>
+<body>
+    <form id="formularioUsuario">
+        <h1>Registrar usuario</h1>
+        <labe>Nombre:</labe>
+        <input type="text" name="nombre" id="nombre">
+        <label>Apellido:</label>
+        <input type="text" name="apellido" id="apellido">
+        <label>Edad:</label>
+        <input type="number" name="edad" id="edad" min="1" max="100" oninput="if(value=='0') value='1'">
+        <label>Correo:</label>
+        <input type="email" name="correo" id="correo">
+        <label>Identificación</label>
+        <select name="tipoIdentificacion" id="tipoIdentificacion">
+            <option value="tarjeta">T.I</option>
+            <option value="cedula">C.C</option>
+            <option value="otro">OTRO</option>
+        </select>
+        <input type="number" name="id" id="id" min="0"> 
+        <input type="submit" class="btn1" value="Guardar" onclick="crearUsuario()">
+    </form>
+    <a href="../index.html" class="action-link">Volver</a>
+    <script src="ag_us.js"></script>
+</body>
+</html>
